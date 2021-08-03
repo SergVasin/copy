@@ -1,0 +1,20 @@
+.toggle_block{
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 1;
+	
+}
+.tb__p{
+	margin: 0px;
+}
+
+.question-cont{
+	/*float: left;*/
+	/*margin: 50px;*/
+	width: 900px;
+	margin: 50px auto;
+}
+
+.info_name {
+	cursor: pointer;
+}

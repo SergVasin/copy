@@ -1,0 +1,43 @@
+html{
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	background-color: #555;
+}
+
+.containerss div {display: none;}
+
+.containerss{
+	margin-top: 100px;
+	text-align: center;
+}
+
+#selectItem{
+	
+	color: yellow;
+	background-color: #555;
+	border-color: #555;
+	outline: none;
+}
+.class,
+.small{
+	color: #fff;
+}
+.icq{
+	color: yellow;
+	display: inline-block;
+	padding: 15px 0px;
+}
+a{
+	color: lime;
+	display: inline-block;
+	padding-top: 15px;
+}
+.choice__city{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 900px;
+	margin: auto;
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Корзина</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="">
+	<link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+	<button class="basket">
+		<p class="basket__text">Корзина</p>
+		<img src="img/korzina.png" alt="" class="basket__img">
+		<p id="cartCount" class="basket__number">0</p>
+	</button>
+
+	<div class="basket-wr">
+		<p class="basket-popup__close">x</p>
+		<p class="basket-wr__title">У вас в корзине</p>
+		<ul class="basket-wr__wr">
+			<li class="basket-item">
+				<img src="#" alt="" class="basket-item__img">
+				<h6><span class="basket-item__span1">Книга рецептов</span> <span class="basket-item__span2">x 1</span> <span class="basket-item__span3">Бесплатно</span>
+				</h6>
+			</li>
+			<li class="dropdown">
+
+				<div id="dropdownCart" class="card">
+
+					<ul id="cartPreview" class="collection"></ul>
+
+					<div class="dropdown-wr">
+						<h6 class="dropdown-wr__title1">Итого</h6>
+						<h5 class="dropdown-wr__title2"><span id="totalPrice">0</span> рублей</h5>
+					</div>
+
+					<div class="dropdown-wr">
+						<a href="#" class="dropdown-wr__btn" onclick="cart.clearCart()">Очистить корзину</a>
+					</div>
+					<!-- /.pl-10 -->
+
+					
+				</div>
+				<!-- /.dropdown-cart -->
+			</li>
+		</ul>
+		<p class="basket-wr__undertitle">Заполните форму, чтобы оформить заказ</p>
+		<form action="#" class="basket-wr__form">
+			<input type="text" placeholder="Номер телефона">
+			<button class="basket-wr__form-btn">Оформить заказ</button>
+		</form>
+	</div>
+
+	<div class="katalog__wr">
+		<div class="katalog__katalog-item">
+			<div class="katalog-item__img">
+				<img src="img/img1.png" alt="">
+			</div>
+			<p class="katalog-item__title">Казан 3.5 л.</p>
+			<div class="katalog-item__box">
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Дно</p>
+					<p class="box-text__right">Плоское</p>
+				</div>
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Диаметр</p>
+					<p class="box-text__right">28 см.</p>
+				</div>
+			</div>
+			<div class="katalog-item__price">
+				<p class="katalog-item__price-old">80 руб.</p>
+				<div class="katalog-item__price-wr">
+					<p class="katalog-item__price-new">70 руб.</p>
+					<p class="katalog-item__price-text">Цена с сезонной скидкой</p>
+				</div>
+			</div>
+			<div class="katalog-item__btn-wr">
+				<button class="katalog-item__btn-buy popup__form-open">Купить</button>
+				<button class="katalog-item__btn-add" onclick="cart.addToCart(1, {title: `Казан 3,5 л.`, price: 70, image: 'img/img1.png'})">
+					<img src="img/korzina.png" alt="">
+					<p class="katalog-item__btn-add-number">+</p>
+				</button>
+			</div>
+		</div>
+		<div class="katalog__katalog-item">
+			<div class="katalog-item__img">
+				<img src="img/img2.png" alt="">
+			</div>
+			<p class="katalog-item__title">Казан 3.5 л.</p>
+			<div class="katalog-item__box">
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Дно</p>
+					<p class="box-text__right">Плоское</p>
+				</div>
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Диаметр</p>
+					<p class="box-text__right">28 см.</p>
+				</div>
+			</div>
+			<div class="katalog-item__price">
+				<p class="katalog-item__price-old">80 руб.</p>
+				<div class="katalog-item__price-wr">
+					<p class="katalog-item__price-new">70 руб.</p>
+					<p class="katalog-item__price-text">Цена с сезонной скидкой</p>
+				</div>
+			</div>
+			<div class="katalog-item__btn-wr">
+				<button class="katalog-item__btn-buy popup__form-open">Купить</button>
+				<button class="katalog-item__btn-add" onclick="cart.addToCart(2, {title: `Казан 3,5 л.`, price: 70, image: 'img/img2.png'})">
+					<img src="img/korzina.png" alt="">
+					<p class="katalog-item__btn-add-number">+</p>
+				</button>
+			</div>
+		</div>
+		<div class="katalog__katalog-item">
+			<div class="katalog-item__img">
+				<img src="img/img3.png" alt="">
+			</div>
+			<p class="katalog-item__title">Казан 3.5 л.</p>
+			<div class="katalog-item__box">
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Дно</p>
+					<p class="box-text__right">Плоское</p>
+				</div>
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Диаметр</p>
+					<p class="box-text__right">28 см.</p>
+				</div>
+			</div>
+			<div class="katalog-item__price">
+				<p class="katalog-item__price-old">80 руб.</p>
+				<div class="katalog-item__price-wr">
+					<p class="katalog-item__price-new">70 руб.</p>
+					<p class="katalog-item__price-text">Цена с сезонной скидкой</p>
+				</div>
+			</div>
+			<div class="katalog-item__btn-wr">
+				<button class="katalog-item__btn-buy popup__form-open">Купить</button>
+				<button class="katalog-item__btn-add" onclick="cart.addToCart(3, {title: `Казан 3,5 л.`, price: 70, image: 'img/img3.png'})">
+					<img src="img/korzina.png" alt="">
+					<p class="katalog-item__btn-add-number">+</p>
+				</button>
+			</div>
+		</div>
+		<div class="katalog__katalog-item">
+			<div class="katalog-item__img">
+				<img src="img/img4.png" alt="">
+			</div>
+			<p class="katalog-item__title">Казан 3.5 л.</p>
+			<div class="katalog-item__box">
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Дно</p>
+					<p class="box-text__right">Плоское</p>
+				</div>
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Диаметр</p>
+					<p class="box-text__right">28 см.</p>
+				</div>
+			</div>
+			<div class="katalog-item__price">
+				<p class="katalog-item__price-old">80 руб.</p>
+				<div class="katalog-item__price-wr">
+					<p class="katalog-item__price-new">70 руб.</p>
+					<p class="katalog-item__price-text">Цена с сезонной скидкой</p>
+				</div>
+			</div>
+			<div class="katalog-item__btn-wr">
+				<button class="katalog-item__btn-buy popup__form-open">Купить</button>
+				<button class="katalog-item__btn-add" onclick="cart.addToCart(4, {title: `Казан 3,5 л.`, price: 70, image: 'img/img4.png'})">
+					<img src="img/korzina.png" alt="">
+					<p class="katalog-item__btn-add-number">+</p>
+				</button>
+			</div>
+		</div>
+		<div class="katalog__katalog-item">
+			<div class="katalog-item__img">
+				<img src="img/img5.png" alt="">
+			</div>
+			<p class="katalog-item__title">Казан 3.5 л.</p>
+			<div class="katalog-item__box">
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Дно</p>
+					<p class="box-text__right">Плоское</p>
+				</div>
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Диаметр</p>
+					<p class="box-text__right">28 см.</p>
+				</div>
+			</div>
+			<div class="katalog-item__price">
+				<p class="katalog-item__price-old">80 руб.</p>
+				<div class="katalog-item__price-wr">
+					<p class="katalog-item__price-new">70 руб.</p>
+					<p class="katalog-item__price-text">Цена с сезонной скидкой</p>
+				</div>
+			</div>
+			<div class="katalog-item__btn-wr">
+				<button class="katalog-item__btn-buy popup__form-open">Купить</button>
+				<button class="katalog-item__btn-add" onclick="cart.addToCart(5, {title: `Казан 3,5 л.`, price: 70, image: 'img/img5.png'})">
+					<img src="img/korzina.png" alt="">
+					<p class="katalog-item__btn-add-number">+</p>
+				</button>
+			</div>
+		</div>
+		<div class="katalog__katalog-item">
+			<div class="katalog-item__img">
+				<img src="img/img6.png" alt="">
+			</div>
+			<p class="katalog-item__title">Казан 3.5 л.</p>
+			<div class="katalog-item__box">
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Дно</p>
+					<p class="box-text__right">Плоское</p>
+				</div>
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Диаметр</p>
+					<p class="box-text__right">28 см.</p>
+				</div>
+			</div>
+			<div class="katalog-item__price">
+				<p class="katalog-item__price-old">80 руб.</p>
+				<div class="katalog-item__price-wr">
+					<p class="katalog-item__price-new">70 руб.</p>
+					<p class="katalog-item__price-text">Цена с сезонной скидкой</p>
+				</div>
+			</div>
+			<div class="katalog-item__btn-wr">
+				<button class="katalog-item__btn-buy popup__form-open">Купить</button>
+				<button class="katalog-item__btn-add" onclick="cart.addToCart(6, {title: `Казан 3,5 л.`, price: 70, image: 'img/img6.png'})">
+					<img src="img/korzina.png" alt="">
+					<p class="katalog-item__btn-add-number">+</p>
+				</button>
+			</div>
+		</div>
+		<div class="katalog__katalog-item">
+			<div class="katalog-item__img">
+				<img src="img/img7.png" alt="">
+			</div>
+			<p class="katalog-item__title">Казан 3.5 л.</p>
+			<div class="katalog-item__box">
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Дно</p>
+					<p class="box-text__right">Плоское</p>
+				</div>
+				<div class="katalog-item__box-text">
+					<p class="box-text__left">Диаметр</p>
+					<p class="box-text__right">28 см.</p>
+				</div>
+			</div>
+			<div class="katalog-item__price">
+				<p class="katalog-item__price-old">80 руб.</p>
+				<div class="katalog-item__price-wr">
+					<p class="katalog-item__price-new">70 руб.</p>
+					<p class="katalog-item__price-text">Цена с сезонной скидкой</p>
+				</div>
+			</div>
+			<div class="katalog-item__btn-wr">
+				<button class="katalog-item__btn-buy popup__form-open">Купить</button>
+				<button class="katalog-item__btn-add" onclick="cart.addToCart(7, {title: `Казан 3,5 л.`, price: 70, image: 'img/img7.png'})">
+					<img src="img/korzina.png" alt="">
+					<p class="katalog-item__btn-add-number">+</p>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<script src="angry-cart.min.js"></script>
+
+	<script>
+
+		let cart = new AngryCart({
+			counter: '#cartCount',
+			totalPrice: '#totalPrice',
+		});
+
+		function angryCPR() {
+			let myCart = JSON.parse(localStorage.getItem(angryCartKey)), // "angryCartKey" - ключ корзины в localStorage (const)
+			renderBlock = document.getElementById('cartPreview');
+
+			/* Очищаем блок перед выводом */
+			renderBlock.innerHTML = '';
+
+			if( myCart.length != 0 )
+			{
+				/* Выводим товары из корзины */
+				Array.from(myCart).forEach( function(product) {
+					renderBlock.insertAdjacentHTML('beforeEnd', `
+						<li class="basket-item">
+						<img src="${product.data.image}" alt="" class="basket-item__img">
+						<h6><span class="basket-item__span1">${product.data.title}</span> <span class="basket-item__span2">x ${product.quantity}</span> <span class="basket-item__span3">${product.data.price} рублей</span></h6>
+						<button class="basket-item__delete-btn" onclick="cart.removeFromCart(${product.product_id})">Удалить</button>
+						</li>
+						`);
+				});
+			}
+			else
+			{
+				// renderBlock.innerHTML = '<li class="grey-text pl-10 pr-10">Корзина пуста</li>';
+			}
+
+			
+		}
+	</script>
+</body>
+</html>

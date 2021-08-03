@@ -1,0 +1,29 @@
+body{
+	background-color: #555;
+}
+#toTop {
+	width:100px;
+	border:1px solid #ff1;
+	background:#f7f;
+	text-align:center;
+	padding:10px;
+	position:fixed;
+	bottom:10px; /* отступ кнопки от нижнего края страницы*/
+	right:10px;
+	cursor:pointer;
+	display:none;
+	color:#333;
+	font-family: Montserrat;
+	font-size:18px;
+	color: #fff;
+}
+#toTop:hover{
+	color: #000;
+	border:1px solid #000;
+	background:#ff1;
+}
+.text {
+	width: 600px;
+	margin: auto;
+	color: yellow;
+}
